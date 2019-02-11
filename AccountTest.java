@@ -54,19 +54,19 @@ public class AccountTest {
       // create a Scanner to obtain input from the command window
       Scanner input = new Scanner(System.in);
 
-      System.out.print("Enter deposit amount for account1: "); // prompt
+      System.out.printf("Enter deposit amount for %s: ",account1.getName()); // prompt
       double depositAmount = input.nextDouble(); // obtain user input
-      System.out.printf("%nadding %.2f to account1 balance%n%n", 
-         depositAmount);
+      System.out.printf("%nadding %.2f to %s's balance %n%n", 
+         depositAmount, account1.getName());
       account1.deposit(depositAmount); // add to account1's balance
 
       displayAccount(account1);
       displayAccount(account2);
       
-      System.out.print("Enter deposit amount for account2: "); // prompt
+      System.out.printf("Enter deposit amount for %s: ",account2.getName()); // prompt
       depositAmount = input.nextDouble(); // obtain user input
-      System.out.printf("%nadding %.2f to account2 balance%n%n", 
-         depositAmount);
+      System.out.printf("%nadding %.2f to %s's balance %n%n", 
+         depositAmount, account2.getName());
       account2.deposit(depositAmount); // add to account2 balance
 
       displayAccount(account1);
